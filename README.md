@@ -1,48 +1,48 @@
-Boilerplate project
+Dependency Management. Home Work 1
 ===============
-This project is a ready-to use boilerplate for "It's not a bug, It's a feature" Java course.
+1\. Create Client interface JAR
+---------------
 
-#### How-to use
+Create new project and declare new interface named `Client`, that will have following contract:
 
-1. `git clone https://github.com/ChangeRequest/boilerplate-project.git name_of_new_project`
-2. `git remote remove origin`
-3. `git remote add origin https://github.com/new_repo/name_of_new_project.git`
-4. Update project name in `settings.gradle`
-5. Update `README.MD` to match newly created repository.
-6. Update Author name in `LICENSE` (if needed)
-7. Continue working in your new ready-to-use repository.
+```java
+public interface Client{
+    void setName(String name);
+    void sayHello();
+}
+```
 
-####Already configured parts
+Create custom manifest file and fill following properties with your information:
+* `Specification-Title` - The value is a string that defines the title of the extension specification
+* `Specification-Vendor` - The value is a string that defines the organization that maintains the extension specification
+* `Build-Date` - The value is a string that defines the date on which JAR file was build in following format: `YYYY-MM-DD`
 
-* Travis-CI configuration file
-* .gitignore file
-* build.gradle (already contains all needed imports)
-* License file with `Apache License Version 2.0`
-* empty package in src folder (`school.lemon.changerequest.java`)
+Be sure to have appropriate package structure.
 
-#### Travis-CI configuration
-* Oracle JDK 8
-* Install step: `gradlew clean assemble`
-* Check step: `gradlew check`
+Prepare .bat\.sh script that should perform following:
+* compile `Client` interface
+* create `.jar` file with compiled class and custom `MANIFEST.MF`
 
-#### .gitignore
-Already configured to ignore most of unwonted stuff:
-* eclipse ignores
-* IDEA ignores
-* Java and Groovy ignores
-* gradle and maven ignores
-* etc.
+2\. Create Client implementation executable JAR
+---------------
 
-#### build.gradle
-* group is `school.lemon.changerequest.java`
-* applied module from [gradle_common project]:
-  * commonModule
-  * javaModule
-  * testModule
-  * idea
-  * eclipse
+Create new project and declare new implementation of `Client` interface named `ConsoleClient`.
 
+This implementation should work with user input and system error output.
 
-  
-[gradle_common project]: https://github.com/ChangeRequest/gradle_common
+Create `Main` class, that creates new `Client` instantiated with `ConsoleClient` instance and:
+* ask for user name
+* greet user
 
+Create custom manifest file and fill following properties with your information:
+* `Main-Class` - The value is a string that denotes entry point of application
+* `Specification-Title` - The value is a string that defines the title of the extension specification
+* `Specification-Vendor` - The value is a string that defines the organization that maintains the extension specification
+* `Build-Date` - The value is a string that defines the date on which JAR file was build in following format: `YYYY-MM-DD`
+
+Prepare .bat\.sh script that should perform following:
+* compile `ConsoleClient` and `Main` classes
+* create executable `.jar` file
+
+Prepare .bat\.sh script that should perform following:
+* run executable `.jar` file with needed dependencies
