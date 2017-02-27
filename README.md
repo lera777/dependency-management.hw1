@@ -19,7 +19,7 @@ Create custom manifest file and fill following properties with your information:
 
 Be sure to have appropriate package structure.
 
-Prepare .bat\.sh script that should perform following:
+Prepare `.bat`/`.sh` script that should perform following:
 * compile `Client` interface
 * create `.jar` file with compiled class and custom `MANIFEST.MF`
 
@@ -40,9 +40,9 @@ Create custom manifest file and fill following properties with your information:
 * `Specification-Vendor` - The value is a string that defines the organization that maintains the extension specification
 * `Build-Date` - The value is a string that defines the date on which JAR file was build in following format: `YYYY-MM-DD`
 
-Prepare .bat\.sh script that should perform following:
+Prepare `.bat`/`.sh` script that should perform following:
 * compile `ConsoleClient` and `Main` classes
 * create executable `.jar` file
 
-Prepare .bat\.sh script that should perform following:
+Prepare `.bat`/`.sh` script that should perform following:
 * run executable `.jar` file with needed dependencies
