@@ -1,5 +1,12 @@
 Dependency Management. Home Work 1
 ===============
+0\. Preconditions
+---------------
+All tasks should be done only with raw JDK tools:
+* `javac`
+* `jar`
+* etc
+
 1\. Create Client interface JAR
 ---------------
 
